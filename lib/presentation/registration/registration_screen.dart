@@ -20,7 +20,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
         title: const Text('Регистрация'),
       ),
       body: Padding(
@@ -28,7 +31,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
                 controller: _firstNameController,
@@ -61,6 +65,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color(0xFF3BEC78),
+                  ),
+                ),
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     final authService =
@@ -75,7 +84,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ChatListScreen()),
+                            builder: (context) => const ChatListScreen()),
                         (Route<dynamic> route) => false,
                       );
                     } else {
@@ -85,17 +94,43 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     }
                   }
                 },
-                child: const Text('Зарегистрироваться'),
+                child: const Text(
+                  'Зарегистрироваться',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    height: 0.09,
+                    letterSpacing: -0.50,
+                  ),
+                ),
               ),
               ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color(0xFF3BEC78),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen()),
                     (Route<dynamic> route) => false,
                   );
                 },
-                child: const Text('Войти'),
+                child: const Text(
+                  'Войти',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    height: 0.09,
+                    letterSpacing: -0.50,
+                  ),
+                ),
               )
             ],
           ),
@@ -120,7 +155,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
         title: const Text('Вход'),
       ),
       body: Padding(
@@ -128,7 +166,8 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextFormField(
                 controller: _emailController,
@@ -153,6 +192,11 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color(0xFF3BEC78),
+                  ),
+                ),
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     final authService =
@@ -165,7 +209,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ChatListScreen()),
+                            builder: (context) => const ChatListScreen()),
                         (Route<dynamic> route) => false,
                       );
                     } else {
@@ -175,18 +219,43 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                   }
                 },
-                child: const Text('Войти'),
+                child: const Text(
+                  'Войти',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    height: 0.09,
+                    letterSpacing: -0.50,
+                  ),
+                ),
               ),
               ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color(0xFF3BEC78),
+                  ),
+                ),
                 onPressed: () async {
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => RegistrationScreen()),
+                        builder: (context) => const RegistrationScreen()),
                     (Route<dynamic> route) => false,
                   );
                 },
-                child: const Text('Зарегистрироваться'),
+                child: const Text(
+                  'Зарегистрироваться',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w600,
+                    height: 0.09,
+                    letterSpacing: -0.50,
+                  ),
+                ),
               )
             ],
           ),
