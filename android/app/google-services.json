@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380836572809",
+    "project_id": "chats-69efb",
+    "storage_bucket": "chats-69efb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380836572809:android:30dc692731affe3ef3e058",
+        "android_client_info": {
+          "package_name": "com.example.tz_chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOiTSOHVyFaHNeIfC5YwK4tPlbjTztSyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
